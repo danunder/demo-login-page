@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 import Home from './components/Home'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <Container>
       {visualMode === "HOME" &&
         <Home
          logIn={() => setVisualMode(LOG_IN)}
@@ -33,7 +35,8 @@ function App() {
         <h1>Log In Form</h1>
         <Button onClick={() => setVisualMode(HOME)}>Cancel</Button>
         </div>
-      }
+        }
+        </Container>
     </div>
   );
 }
